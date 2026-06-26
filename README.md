@@ -6,7 +6,6 @@ The project demonstrates the fundamentals of building RESTful APIs using ASP.NET
 
 ---
 
-## Features
 
 ## Features
 
