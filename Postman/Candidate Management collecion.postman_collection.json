@@ -1,0 +1,412 @@
+{
+  "info": {
+    "_postman_id": "8dd7c0ab-fb4c-4f30-af2e-3eb64a1d960c",
+    "name": "Candidate Management collecion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52344223",
+    "_collection_link": "https://go.postman.co/collection/52344223-8dd7c0ab-fb4c-4f30-af2e-3eb64a1d960c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Candidate",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Successful POST request\", function () {\r",
+              "    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/Candidates",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "Candidates"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Candidate",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/Candidates",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "Candidates"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 27 Jun 2026 01:31:23 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"statusCode\": 201,\n    \"meta\": null,\n    \"succeeded\": true,\n    \"message\": \"Created successfully\",\n    \"errors\": null,\n    \"data\": {\n        \"id\": 3,\n        \"fullName\": \"Menna Ahemd\",\n        \"email\": \"menna@example.com\",\n        \"track\": 2,\n        \"level\": 2,\n        \"status\": 1,\n        \"createdAt\": \"2026-06-27T01:31:23.8131861Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get All Candidates",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/Candidates",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "Candidates"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Candidates",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/Candidates",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "Candidates"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 27 Jun 2026 01:34:47 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\n    \"statusCode\": 200,\n    \"meta\": null,\n    \"succeeded\": true,\n    \"message\": \"Success\",\n    \"errors\": null,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"fullName\": \"Alaa Hani\",\n            \"email\": \"user@example.com\",\n            \"track\": 1,\n            \"level\": 1,\n            \"status\": 2,\n            \"createdAt\": \"2026-06-26T21:49:36.0720841\"\n        },\n        {\n            \"id\": 3,\n            \"fullName\": \"Menna Ahemd\",\n            \"email\": \"menna@example.com\",\n            \"track\": 2,\n            \"level\": 2,\n            \"status\": 1,\n            \"createdAt\": \"2026-06-27T01:31:23.8131861\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get by Id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/Candidates/1",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "Candidates",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get by Id",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/Candidates/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "Candidates",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 27 Jun 2026 01:38:01 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"statusCode\": 200,\n    \"meta\": null,\n    \"succeeded\": true,\n    \"message\": \"Success\",\n    \"errors\": null,\n    \"data\": {\n        \"id\": 1,\n        \"fullName\": \"Alaa Hani\",\n        \"email\": \"user@example.com\",\n        \"track\": 1,\n        \"level\": 1,\n        \"status\": 2,\n        \"createdAt\": \"2026-06-26T21:49:36.0720841\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Status",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/Candidates/1/status",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "Candidates",
+            "1",
+            "status"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Status",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"status\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/Candidates/1/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "Candidates",
+                "1",
+                "status"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 27 Jun 2026 01:38:40 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"statusCode\": 200,\n    \"meta\": null,\n    \"succeeded\": true,\n    \"message\": \"Success\",\n    \"errors\": null,\n    \"data\": \"Candidate status updated successfully.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete candidate",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/Candidates/4",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "Candidates",
+            "4"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete candidate",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fullName\": \"Menna Ahemd\",\r\n  \"email\": \"menna@example.com\",\r\n  \"track\": 2,\r\n  \"level\": 2\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/Candidates/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "Candidates",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 27 Jun 2026 01:49:06 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"statusCode\": 200,\n    \"meta\": null,\n    \"succeeded\": true,\n    \"message\": \"Success\",\n    \"errors\": null,\n    \"data\": \"Candidate deleted successfully.\"\n}"
+        }
+      ]
+    }
+  ]
+}

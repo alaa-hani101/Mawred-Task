@@ -127,7 +127,7 @@ namespace Mawred_Task.Services.Implementations
 
             await _candidateRepository.SaveChangesAsync();
 
-            return _responseHandler.NoContent<string>();
+            return _responseHandler.Success<string>("Candidate deleted successfully.");
         }
 
     }
