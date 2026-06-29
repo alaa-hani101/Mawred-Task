@@ -34,7 +34,7 @@ The project demonstrates the fundamentals of building RESTful APIs using ASP.NET
 * SQL Server / SQLite / InMemory Database
 * Swagger (OpenAPI)
 * C#
-* .NET 9
+* .NET 10
 
 ---
 
@@ -73,7 +73,7 @@ CandidateManagementAPI
 | POST   | `/api/candidates`             | Add a new candidate     |
 | GET    | `/api/candidates`             | Get all candidates      |
 | GET    | `/api/candidates/{id}`        | Get candidate by ID     |
-| PUT    | `/api/candidates/{id}/status` | Update candidate status |
+| PATCH    | `/api/candidates/{id}/status` | Update candidate status |
 | DELETE | `/api/candidates/{id}`        | Delete candidate        |
 
 ---
@@ -93,13 +93,13 @@ CandidateManagementAPI
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/CandidateManagementAPI.git
+git clone https://github.com/alaa-hani101/Mawred-Task
 ```
 
 ### Navigate to the project
 
 ```bash
-cd CandidateManagementAPI
+cd Mawred-Task 
 ```
 
 ### Restore packages
@@ -134,8 +134,8 @@ https://localhost:xxxx/swagger
 {
   "fullName": "Alaa Hani",
   "email": "alaa@example.com",
-  "track": "Backend",
-  "level": "Intermediate"
+  "track": 1,
+  "level": 2
 }
 ```
 
